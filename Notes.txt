@@ -1,1 +1,4 @@
-ᕙ(‾̀³‾́)ᕗ ODI PORTFOLIO WEB APP (using react & tailwind) ᕙ(‾̀³‾́)ᕗ
+ᕙ(‾̀³‾́)ᕗ ODI PORTFOLIO WEB APP (using react, next & tailwind) ᕙ(‾̀³‾́)ᕗ
+
+1. npx create-next-app@latest
+
