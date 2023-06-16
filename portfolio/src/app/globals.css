@@ -13,10 +13,51 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --odi-t-blue: #0000ff;
+    --odi-t-magenta: #ff00ff;
+    --odi-t-yellow: #ffd700;
+    --odi-t-green: #98fb98;
+    --odi-t-red: #fa8072;
+    --odi-bg-blue: #0000ff;
+    --odi-bg-magenta: #ff00ff;
+    --odi-bg-yellow: #ffd700;
+    --odi-bg-green: #98fb98;
+    --odi-bg-red: #fa8072;
   }
 }
 
-body {
+.odi-t-blue {
+  color: var(--odi-t-blue);
+}
+.odi-t-magenta {
+  color: var(--odi-t-magenta);
+}
+.odi-t-yellow {
+  color: var(--odi-t-yellow);
+}
+.odi-t-green {
+  color: var(--odi-t-green);
+}
+.odi-t-red {
+  color: var(--odi-t-red);
+}
+.odi-bg-blue {
+  background-color: var(--odi-bg-blue);
+}
+.odi-bg-magenta {
+  background-color: var(--odi-bg-magenta);
+}
+.odi-bg-yellow {
+  background-color: var(--odi-bg-yellow);
+}
+.odi-bg-green {
+  background-color: var(--odi-bg-green);
+}
+.odi-bg-red {
+  background-color: var(--odi-bg-red);
+}
+
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +65,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */

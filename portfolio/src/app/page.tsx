@@ -1,113 +1,125 @@
-import Image from 'next/image'
+"use client";
+import Head from "next/head";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className={darkMode ? "dark" : ""}>
+      {/* className=" text-5xl py-2 font-extrabold text-transparent bg-clip-text 
+      bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gray-300 via-fuchsia-600 to-orange-600"
+      > */}
+      {/* <h1 className=" text-lg text-stone-950">Goldie Tiara Portfolio</h1> */}
+      <main className=" bg-white px-10 text-stone-900 md:px-20 lg:px-40 dark:bg-slate-900">
+        <section className=" min-h-screen">
+          {/* <nav className=" py-10 mb-12 flex-row justify-end align-middle min-w-full"> */}
+          <nav className=" flex justify-between py-5 mb-12">
+            <h1 className=" text-xl font-semibold">developedbyodi</h1>
+            <ul className=" flex justify-between items-center gap-3">
+              <li>
+                <BsFillMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className=" cursor-pointer text-2xl text-stone-900"
+                />
+              </li>
+              <li>
+                <a
+                  className=" odi-bg-blue py-2 px-3 rounded-xl text-white cursor-pointer text-sm"
+                  href="#"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className=" text-center p-10 py-10">
+            <h2 className=" text-5xl py-2 font-extrabold md:text-6xl">
+              Goldie Tiara Putri
+            </h2>
+            <h3 className=" text-xl py-2 ">
+              Front-End Developer and Graphic Designer
+            </h3>
+            <p className=" font-light leading-8 text-gray-800 md:text-xl max-w-lg mx-auto">
+              Passionate in creating a visualy appealing design! and likes to
+              code (Front-End)
+            </p>
+            <p></p>
+          </div>
+          <div className=" flex justify-center align-middle">
+            <BsLinkedin className=" text-blue-600 text-2xl" />
+          </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <div className="relative odi-bg-yellow rounded-full w-80 h-80 mt-20 mx-auto"></div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl py-3 mt-5">Services I Offer</h3>
+            <p className=" py-2 font-light leading-8 text-gray-800 text-md">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              doloremque rerum{" "}
+              <span className=" odi-t-magenta font-normal">
+                cupiditate recusandae
+              </span>{" "}
+              suscipit, libero quisquam repudiandae vitae ipsa facere commodi
+              autem architecto hic ducimus sapiente, nemo, quia enim quidem.
+            </p>
+            <p className=" py-2 font-light leading-8 text-gray-800 text-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <div className="lg:flex gap-10">
+            <div className=" text-center shadow-lg p-10 rounded-xl my-10">
+              <h3 className="text-lg py-1"> Service 1</h3>
+              <p className="py-2 font-light">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.{" "}
+              </p>
+              <h4 className="py-4 odi-t-green"> Tools that I use</h4>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+            </div>
+            <div className=" text-center shadow-lg p-10 rounded-xl my-10">
+              <h3 className="text-lg py-1"> Service 1</h3>
+              <p className="py-2 font-light">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.{" "}
+              </p>
+              <h4 className="py-4 odi-t-green"> Tools that I use</h4>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+            </div>
+            <div className=" text-center shadow-lg p-10 rounded-xl my-10">
+              <h3 className="text-lg py-1"> Service 1</h3>
+              <p className="py-2 font-light">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.{" "}
+              </p>
+              <h4 className="py-4 odi-t-green"> Tools that I use</h4>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+              <p className="py-1 font-light"> wawa</p>
+            </div>
+          </div>
+          <div className=" mb-32">
+            <h3 className="text-3xl py-3 mt-5">Portfolio</h3>
+            <p className=" py-2 font-light leading-8 text-gray-800 text-md">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+              doloremque rerum{" "}
+              <span className=" odi-t-magenta font-normal">
+                cupiditate recusandae
+              </span>{" "}
+              suscipit, libero quisquam repudiandae vitae ipsa facere commodi
+              autem architecto hic ducimus sapiente, nemo, quia enim quidem.
+            </p>
+            <p className=" py-2 font-light leading-8 text-gray-800 text-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
